@@ -1,41 +1,36 @@
-# Fyle Frontend Challenge
+# GitHub Repository Viewer
 
-## Who is this for?
+GitHub Repository Viewer is a single-page application (SPA) developed using Angular 14+ that allows users to search for a GitHub username and view the public repositories belonging to that user.
 
-This challenge is meant for candidates who wish to intern at Fyle and work with our engineering team. The candidate should be able to commit to at least 6 months of dedicated time for internship.
+## Features
 
-## Why work at Fyle?
-
-Fyle is a fast-growing Expense Management SaaS product. We are ~40 strong engineering team at the moment. 
-
-We are an extremely transparent organization. Check out our [careers page](https://careers.fylehq.com) that will give you a glimpse of what it is like to work at Fyle. Also, check out our Glassdoor reviews [here](https://www.glassdoor.co.in/Reviews/Fyle-Reviews-E1723235.htm). You can read stories from our teammates [here](https://stories.fylehq.com).
-
-## Challenge outline
-
-This challenge involves implementing application using github api. 
-
-The services that you need to use are already implemented - check out ApiService.
-
-You can see details of this challenge [here](https://fyleuniverse.notion.site/fyleuniverse/Fyle-Frontend-development-challenge-cb5085e5e0864e769e7b98c694400aaa)
-
-__Note__ - This challenge is in angular. We work on angular frameworks & after you join we expect the same from you. Hence it is required to complete this assignement in angular itself.
-
-## What happens next?
-
-You will hear back within 48 hours from us via email.
+- **GitHub User Search:** Enter a GitHub username in the search bar to retrieve the user's public repositories.
+- **Repository List:** Displays the list of public repositories belonging to the searched user.
+- **Repository Details:** Click on a repository to view more details such as the repository name, description, stars count, forks count, and the URL to the repository.
 
 ## Installation
 
-1. Fork this repository to your github account.
-2. Clone the forked repository and proceed with steps mentioned below.
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/github-repository-viewer.git
 
 ### Install requirements
 * Install angular cli [Ref](https://angular.io/cli)
 * `npm install` in this repository 
-
+npm start
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+## Technologies Used
+Angular 14+
+TypeScript
+HTML/CSS
+GitHub API
+
+## Screenshots
+![Screenshot (1)](https://github.com/nami63/fyle-internship-challenge-23/assets/128203391/8b5e1fac-a6b1-4bf1-aaec-f8a3b3546c4d)
 
 ## Further help
 
