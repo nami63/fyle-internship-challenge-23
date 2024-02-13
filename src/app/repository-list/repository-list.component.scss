@@ -1,0 +1,38 @@
+/* repository-list.component.css */
+
+/* Style for the container of repository list */
+.repository-list-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for individual repository items */
+  .repository-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for repository name */
+  .repository-name {
+    font-weight: bold;
+  }
+  
+  /* Style for repository description */
+  .repository-description {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Style for repository language */
+  .repository-language {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888;
+  }
+  

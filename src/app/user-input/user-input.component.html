@@ -1,0 +1,44 @@
+<div class="max-w-screen-lg border border-gray-300 rounded p-4">
+
+  <form (submit)="searchRepositories()" class="flex items-center border-b border-b-2 border-teal-500 py-2">
+    <input type="text" [(ngModel)]="username" #usernameInput name="username" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" placeholder="Enter GitHub Username">
+    <button type="submit" class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded">Search</button>
+  </form>
+
+  <div *ngIf="profile" class="mt-4 flex items-center">
+    <img [src]="profile.avatar_url" alt="Profile Image" class="mr-6 rounded-full shadow-md border border-gray-200" style="width: 200px;">
+    <div class="flex flex-col">
+      <h2 class="text-2xl">{{ profile.login }}</h2>
+    </div>
+  </div>
+
+  <div *ngIf="profile">
+    <a [href]="profile.html_url" target="_blank" class="text-blue-500 hover:underline">{{ profile.html_url }}</a>
+  </div>
+
+  <div class="mt-4">
+    <h3 class="text-xl mb-2">Repositories:</h3>
+    <ul *ngIf="isLoading; else repositoriesList" class="text-gray-600 p-4">Loading...</ul>
+    <ng-template #repositoriesList>
+      <ul *ngIf="repositories.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <li *ngFor="let repo of repositories" class="bg-white rounded-lg overflow-hidden border-2 border-black">
+          <div class="p-4">
+            <a [href]="repo.html_url" target="_blank" class="text-blue-500 hover:underline">{{ repo.name }}</a>
+            <p class="text-gray-600">Language: {{ repo.language }}</p>
+          </div>
+        </li>
+      </ul>
+      <ul *ngIf="repositories.length === 0">
+        <p class="text-gray-600 p-4">No repositories found.</p>
+      </ul>
+    </ng-template>
+    <div *ngIf="repositories.length > 0">
+      <div class="flex justify-center mt-4">
+        <button (click)="prevPage()" class="mr-2" [disabled]="currentPage === 1">Previous</button>
+        <span>Page {{ currentPage }}</span>
+        <button (click)="nextPage()" class="ml-2" [disabled]="repositories.length < pageSize">Next</button>
+      </div>
+    </div>
+  </div>
+
+</div>
